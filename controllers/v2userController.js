@@ -31,8 +31,8 @@ const postDatav2 = async(req, res) => {
     const {name,email,_password}= req.body;
     const requestData = req.body;
     const poduct= await Product.create(requestData)
-    const hashedpassword = await bcrypt.hashSync(_password, 10);
-    console.log('Hash password' + hashedpassword);
+    //const hashedpassword = await bcrypt.hashSync(_password, 10);
+    //console.log('Hash password' + hashedpassword);
     users.push(poduct)
     res.json(poduct);
 }
